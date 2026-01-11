@@ -1,10 +1,7 @@
 /** @format */
 
+"use client";
+
 export default function Projects() {
-  return <>
-
-
-  <div>this is projects page</div>
-  
-  </>;
+  return <><h1 className="text-black text-7xl">this is projects section </h1></>;
 }
