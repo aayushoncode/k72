@@ -26,12 +26,12 @@ export default function Home() {
         amount: -0.25,
       },
     });
-    tl.from(parentStair.current, {
-      display: "none",
-    });
-    tl.to(".stair", {
-      y: "0%",
-    });
+    // tl.from(parentStair.current, {
+    //   display: "none",
+    // });
+    // tl.to(".stair", {
+    //   y: "0%",
+    // });
   });
   return (
     <>
