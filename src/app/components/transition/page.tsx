@@ -4,10 +4,15 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 export default function stairTransition() {
-  const currentPath = usePathname();
-  console.log("current path name ", currentPath);
+  // const currentPath = usePathname();
+
+  const locate = useRouter();
+  console.log(locate.pathname)
+
+  // console.log(currentPath.pathname)
   const parentStair = useRef(null);
   useGSAP(
     function () {
@@ -35,7 +40,7 @@ export default function stairTransition() {
       //   y: "0%",
       // });
     },
-    [currentPath]
+    []
   );
   return (
     <>
