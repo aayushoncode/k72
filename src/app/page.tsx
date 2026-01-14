@@ -3,13 +3,11 @@
 import Image from "next/image";
 import "./globals.css";
 import Link from "next/link";
-// import Stairs from "@/app/components/transition/page";
 
 export default function Home() {
   return (
     <>
       <div className=" h-[110vh]  w-full ">
-        {/* <Stairs /> */}
         <video
           autoPlay
           muted
