@@ -34,7 +34,7 @@ export default function RootLayout({
         <Navbar />
         <Stairs />
         <FullScreenNavbar />
-        {/* {children} */}
+        {children}
       </body>
     </html>
   );
