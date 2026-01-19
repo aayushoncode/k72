@@ -1,43 +1,38 @@
 /** @format */
 
 "use client";
-// import React from "react";
-export default function fullScreenNavbar() {
-  return (
-    <>
-      <div className="h-screen w-full bg-black font-bold  ">
-        <div className="h-1/6  "></div>
-        <div className="h-1/6 border-t-1 relative overflow-x-hidden  border-white/50 flex justify-center items-center   ">
-          <h1 className="text-[90px]">PROJETS</h1>
 
-          <div className="absolute h-34 bg-[#D3FD50] top-0">
-            <div className="flex h-full  text-black  moveX items-center    gap-7 ">
-              <h2 className="text-[7vw]  whitespace-nowrap text-center">
-                {" "}
-                Pour tout voir
-              </h2>
-              <img
-                className="h-16 w-46 shrink-0 object-cover  rounded-full"
-                src="https://k72.ca/images/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_1280x960.jpg?w=1280&h=960&s=b5151821a8c0d9603263d7ec827bee9b"
-                alt="bag"
-              />
+function MarqueeItem() {
+  return (
+    <div className="marquee-item">
+      <span>POUR TOUT VOIR</span>
+
+      <div className="img-pill">
+        <img src="https://k72.ca/images/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290.jpg?w=640&h=290&s=ac50a70feaaa2601b3aacad544c6045b" />
+      </div>
+
+      <span>POUR TOUT VOIR</span>
+
+      <div className="img-pill">
+        <img src="https://k72.ca/images/caseStudies/iA_BRAND/Thumbnail.png?w=640&h=290&s=755b635c06d126151d64017fa1042a7c" />
+      </div>
+    </div>
+  );
+}
+
+export default function Page() {
+  return (
+    <div className="h-screen bg-black">
+      <div className="relative h-40 overflow-hidden border-t border-white/30">
+        <div className="absolute inset-0 bg-[#D3FD50] flex items-center">
+          <div className="marquee-wrapper">
+            <div className="marquee-track">
+              <MarqueeItem />
+              <MarqueeItem /> {/* duplicate */}
             </div>
           </div>
         </div>
-        <div className="h-1/6 border-t-1 border-white/50 flex justify-center items-center text-[90px]  ">
-          <h1>AGENCE</h1>
-          <div></div>
-        </div>
-        <div className="h-1/6 border-t-1 border-white/50 flex justify-center items-center text-[90px]  ">
-          <h1>CONTACT</h1>
-          <div></div>
-        </div>
-        <div className="h-1/6 border-t-1 border-white/50  flex justify-center items-center text-[90px]  ">
-          <h1>BLOGUE</h1>
-          <div></div>
-        </div>
-        <div className="h-1/6 border-t-1 border-white/50 "></div>
       </div>
-    </>
+    </div>
   );
 }
